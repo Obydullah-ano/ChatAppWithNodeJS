@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Caht Server</title>
+		<script src="scripts/jquery.js"></script>
+		<script src="scripts/socket.io.js"></script>
+		<script src="scripts/default.js"></script>
+
+<style>
+#container{
+width:900px;
+height:700px;
+background-color:#CFCFCF;
+margin:auto auto auto auto;
+}
+
+h1{
+color:white;
+text-align:center;
+padding-top:25px;
+}
+
+.userContainer{
+float:left;
+width:30%;
+height:500px;
+background-color:#CA618C;
+overflow-y:scroll;
+padding-left:15px;
+}
+
+.conversationContainer{
+float:left;
+width:60%;
+height:500px;
+padding:10px;
+overflow-y:scroll;
+margin-right:10px;
+}
+
+footer{
+margin-top:10px;
+padding-right:100px;
+height:100px;
+float:right;
+}
+
+.input{
+text-align: center;
+max-width: 250px;
+float:left;
+padding:15px;
+margin-right:10px;
+margin-bottom: 10px;
+background-color:teal;
+border:none;
+}
+
+img{
+width:300px;
+}
+</style>
+
+	</head>
+	<body>
+		<div id="container">
+			<header>
+				<h1>Chat Application</h1>
+			</header>
+				
+			<div class="userContainer">
+				<h2>Active Users</h2>
+				<div id="users"></div>
+			</div>
+
+			<div class="conversationContainer">
+				<div id="conversation"></div>
+			</div>
+			<footer>
+				<div class="input" id="dropZone" style="border:1px solid;">Drop you file here...</div>
+				<input class="input" type="text" id="data"/>
+				<input class="input" type="button" id="dataSend" value="Message Send"/>
+			</footer>
+		</div>
+	</body>
+</html>
